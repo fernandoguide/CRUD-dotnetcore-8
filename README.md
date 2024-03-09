@@ -1,28 +1,30 @@
 # DotNetWebAPI_InMemoryDatabase
 
-This is a simple .NET Web API project for managing books, created to explore .NET 8 with Entity Framework Core using an in-memory database. The project follows the repository pattern to handle book-related operations.
+This is a simple .NET Web API project for managing Contatos, created to explore .NET 8 with Entity Framework Core using an in-memory database. The project follows the repository pattern to handle Contato-related operations.
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [DotNetWebAPI\_InMemoryDatabase](#dotnetwebapi_inmemorydatabase)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Features](#features)
+  - [Prerequisites](#prerequisites)
+  - [Getting Started](#getting-started)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ## Introduction
 
-The project is a RESTful Web API that provides endpoints to perform CRUD operations on books. It utilizes Entity Framework Core with an in-memory database for data storage.
+The project is a RESTful Web API that provides endpoints to perform CRUD operations on Contatos. It utilizes Entity Framework Core with an in-memory database for data storage.
 
 ## Features
 
-- **Get All Books**: Retrieve a list of all books.
-- **Add Book**: Add a new book to the database.
-- **Delete Book**: Delete a book by its ID.
-- **Update Book**: Update an existing book.
-- **Get Book by ID**: Retrieve a specific book by its ID.
+- **Get All Contatos**: Retrieve a list of all Contatos.
+- **Add Contato**: Add a new Contato to the database.
+- **Delete Contato**: Delete a Contato by its ID.
+- **Update Contato**: Update an existing Contato.
+- **Get Contato by ID**: Retrieve a specific Contato by its ID.
 
 ## Prerequisites
 
@@ -40,27 +42,50 @@ Before you begin, ensure you have the following prerequisites:
     git clone https://github.com/fernandoguide/CRUD-dotnetcore-8
     ```
 
-2. Open the project in your preferred IDE.
+2. Open the project in your preferred IDE 
+ 
+ ```bash
+        cd CRUD-dotnetcore-8 && docker-compose up -d
+  ```
 
-3. Build the solution.
+3. 
+    ```bash
+    git checkout feature/mysql
+    ```
 
-4. Run the application.
+4. ```bash
+   dotnet restore
+   ```
+
+5. ```bash
+   dotnet build
+   ```
+
+6. ```bash
+   dotnet ef migrations add InitialCreate
+   ```
+
+7. ```bash
+   dotnet ef database update
+    ```
+
+8. Build the solution.
+
+9. Run the application.
 
 ## Usage
 
 The API provides the following endpoints:
 
-- **GET /api/books**: Retrieve a list of all books.
+- **GET /api/Contato**: Retrieve a list of all Contatos.
 
-- **POST /api/books**: Add a new book to the database.
+- **POST /api/Contato**: Add a new Contato to the database.
 
     Example Request:
     ```json
     {
-        "title": "The Great Gatsby",
-        "description": "A novel by F. Scott Fitzgerald",
-        "author": "F. Scott Fitzgerald",
-        "price": 10.99
+        "Telefone": "11999876654",
+        "email": "fdev@gmail.com"
     }
     ```
 
@@ -70,30 +95,26 @@ The API provides the following endpoints:
         "status": "OK"
     }
     ```
-- **GET /api/books/{id}**: Retrieve a specific book by its ID.
+- **GET /api/Contato/{id}**: Retrieve a specific contato by its ID.
 
     Example Response:
     ```json
     {
         "id": 1,
-        "title": "The Great Gatsby",
-        "description": "A novel by F. Scott Fitzgerald",
-        "author": "F. Scott Fitzgerald",
-        "price": 10.99
+        "Telefone": "11999876654",
+        "email": "fdev@gmail.com"
     }
     ```
-- **DELETE /api/books/{id}**: Delete a book by its ID.
+- **DELETE /api/Contato/{id}**: Delete a Contato by its ID.
 
-- **PUT /api/books**: Update an existing book.
+- **PUT /api/Contato**: Update an existing Contato.
 
     Example Request:
     ```json
     {
         "id": 1,
-        "title": "New Title",
-        "description": "Updated description",
-        "author": "Updated Author",
-        "price": 19.99
+        "Telefone": "11999876654",
+        "email": "fdev@gmail.com"
     }
     ```
 

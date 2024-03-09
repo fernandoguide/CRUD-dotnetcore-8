@@ -4,16 +4,26 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 // Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IBooks,BookServices>();
-builder.Services.AddDbContext<BookContext>(options =>
-options.UseInMemoryDatabase("Book"));
-
+builder.Services.AddScoped<IContato, ContatoServices>();
+// builder.Services.AddScoped<IContato, ContatoServices>();
+// builder.Services.AddScoped<ICliente, ClienteServices>();
+// builder.Services.AddScoped<IMensagem, MensagemServices>();
+var connectionString = "server=localhost;user=root;password=password;database=MEU_BANCO";
+// Replace 'YourDbContext' with the name of your own DbContext derived class.
+builder.Services.AddDbContext<ApplicationDbContext>(
+    dbContextOptions => dbContextOptions
+        .UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
+        .LogTo(Console.WriteLine, LogLevel.Information)
+        .EnableSensitiveDataLogging()
+        .EnableDetailedErrors()
+);
 
 var app = builder.Build();
 
