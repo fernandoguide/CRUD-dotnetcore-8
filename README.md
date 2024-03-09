@@ -37,7 +37,7 @@ Before you begin, ensure you have the following prerequisites:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/RahulMule/DotNetWebAPI_InMemoryDatabase.git
+    git clone https://github.com/fernandoguide/CRUD-dotnetcore-8
     ```
 
 2. Open the project in your preferred IDE.
