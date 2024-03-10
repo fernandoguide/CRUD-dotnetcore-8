@@ -1,0 +1,545 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lixo Eletrônico</title>
+
+  <!-- w3schools -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <!-- ícone da página-->
+  <link rel="shortcut icon" href="../../assets/images/icone.png" sizes="512" type="image/x-icon">
+
+
+  <!-- link bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <!-- link fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+
+<style>
+  header {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+    background: white;
+    color: black;
+    /* box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; */
+    padding: 0%;
+    border: #49ae90;
+    border-bottom-style: solid;
+
+  }
+
+  footer {
+    background: white;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    border: #49ae90;
+    border-top-style: solid;
+    /* box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; */
+    padding: 0%;
+    width: 100%;
+    bottom: 0;
+  }
+
+  .hover:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+  }
+
+  .item:hover {
+    font-weight: bold;
+    color: black;
+    transition: 0.5s;
+    transform: scale(1.1);
+  }
+
+  .titulo {
+    text-align: left;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    /* text-decoration: underline #49ae90;  */
+    color: black;
+    /* border: #49ae90;
+    border-bottom-style: solid; */
+  }
+
+  .texto {
+    text-align: justify;
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+    font-size: 17px;
+    hyphens: auto;
+  }
+
+  .titulo:hover {
+    color: #49ae90;
+    font-family: 'Montserrat', sans-serif;
+    /* text-decoration: underline #49ae90; */
+  }
+
+  .marcatexto:hover {
+    background: #49ae90;
+    display: inline;
+    padding: 3px 0 !important;
+    position: relative;
+    font-weight: bold;
+    color: white;
+  }
+
+  .marcatexto {
+    font-weight: bold;
+  }
+
+  .topicos {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+    color: black;
+    margin-left: 40px;
+  }
+
+  .mySlides {
+    display: none;
+  }
+
+  .download {
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+    font-size: 17px;
+    text-align: center;
+  }
+
+  /* botão */
+  .link {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #49ae90;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: underline #49ae90;
+    border-radius: 65px;
+    cursor: pointer;
+
+    margin: 0 auto;
+  }
+
+  .link:hover {
+    padding: 15px 29px;
+    background-color: #309275;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: underline #309275;
+  }
+
+  #page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+
+  #content-wrap {
+    padding-bottom: 2.5rem;
+  }
+
+  /* scroolbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(255, 255, 255);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #49ae90;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #49ae90;
+  }
+
+</style>
+
+<!-- seta desce -->
+
+
+<!-- conteúdo -->
+<div class="container conteudo">
+  <div class="w3-container w3-animate-bottom w3-panel">
+    <h3 class="titulo">O Que é Lixo Eletrônico?</h3>
+  </div>
+</div>
+<!-- para adicionar uma cor na borda inserir na classe o código w3-border-cor desejada -->
+
+<div class="container conteudo">
+  <div class="w3-container w3-animate-bottom ">
+    <p class="texto">Lixo eletrônico, ou e-lixo, refere-se aos resíduos provenientes de dispositivos eletrônicos
+      descartados, como <span class="marcatexto">computadores</span>, <span class="marcatexto">celulares</span>,
+      <span class="marcatexto">eletrodomésticos</span> e <span class="marcatexto">outros equipamentos
+        tecnológicos</span>. Com o rápido avanço tecnológico e a obsolescência programada, muitos desses
+      dispositivos são substituídos frequentemente, resultando em um aumento significativo de resíduos. O problema
+      é agravado pela presença de substâncias tóxicas em alguns componentes eletrônicos, representando riscos
+      ambientais e para a saúde quando o descarte não é realizado de maneira adequada. A gestão responsável do
+      lixo eletrônico torna-se crucial para mitigar seus impactos negativos.</p>
+  </div>
+</div><br>
+
+<!-- imagens lixo eletrônico  -->
+<<div class="container conteudo">
+  <div class="w3-container w3-animate-bottom">
+    <div class="w3-content w3-display-container">
+      <img class="mySlides" [src]="currentImage" style="width: 500px;">
+      <button class="w3-button w3-black w3-display-left" (click)="prevImage()">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" (click)="nextImage()">&#10095;</button>
+    </div>
+  </div>
+  </div><br><br>
+
+  <!-- conteúdo -->
+  <div class="container conteudo">
+    <div class="w3-container w3-animate-bottom w3-panel">
+      <h3 class="titulo">Consequências Adversas do Descarte Inadequado de Resíduos Eletrônicos</h3>
+    </div>
+  </div>
+
+  <div class="container conteudo">
+    <div class="w3-container w3-animate-bottom">
+
+      <!-- cards -->
+      <div class='container'>
+        <div class='row'>
+          <div class='col-3'>
+            <div class=''>
+              <div class="container" style="width: 13rem;">
+                <img src="../../assets/images/t.png" class="card-img-top" alt="...">
+                <div class="card-body"><br>
+                  <p class="texto">Muitos dispositivos eletrônicos contêm substâncias tóxicas, como <span
+                      class="marcatexto">mercúrio</span>, <span class="marcatexto">chumbo</span>, <span
+                      class="marcatexto">cádmio</span> , <span class="marcatexto">berílio</span>, e <span
+                      class="marcatexto">retardadores de chama bromados</span>. Quando esses materiais entram em
+                    contato com o solo e a água, podem contaminar o meio ambiente e afetar a saúde humana.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class='col-3'>
+            <div class=''>
+              <div class="container" style="width: 13rem;">
+                <img src="../../assets/images/poluicao.png" class="card-img-top" alt="...">
+                <div class="card-body"><br>
+                  <p class="texto">O descarte inadequado de lixo eletrônico pode levar à contaminação do solo e da
+                    água. As substâncias tóxicas presentes nos eletrônicos podem lixiviar para o solo e,
+                    eventualmente, atingir os corpos d'água, afetando <span class="marcatexto">ecossistemas</span> e
+                    <span class="marcatexto">contaminando recursos hídricos</span> utilizados pelas comunidades.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class='col-3'>
+            <div class=''>
+              <div class="container" style="width: 13rem;">
+                <img src="../../assets/images/saude.png" class="card-img-top" alt="...">
+                <div class="card-body"><br>
+                  <p class="texto">A exposição direta ou indireta a substâncias tóxicas presentes no lixo eletrônico
+                    pode causar uma série de problemas de saúde, como distúrbios neurológicos, problemas
+                    respiratórios, danos ao sistema reprodutivo, e até mesmo aumentar o risco de câncer.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class='col-3'>
+            <div class=''>
+              <div class="container" style="width: 13rem;">
+                <img src="../../assets/images/empregados.png" class="card-img-top" alt="...">
+                <div class="card-body"><br>
+                  <p class="texto">Durante o processo de reciclagem informal, muitos trabalhadores podem ser
+                    expostos a emissões de <span class="marcatexto">gases tóxicos</span> provenientes da queima
+                    inadequada de componentes eletrônicos, o que pode resultar em problemas respiratórios e outros
+                    <span class="marcatexto">impactos na saúde.</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="texto w3-container w3-animate-bottom">Para mitigar esses problemas, é fundamental implementar
+            práticas adequadas de <span class="marcatexto">gestão de resíduos eletrônicos</span>, <span
+              class="marcatexto">promover a reciclagem responsável</span> e <span class="marcatexto">conscientizar a
+              população sobre a importância do descarte seguro de dispositivos eletrônicos</span>. Além disso,
+            regulamentações e políticas governamentais podem desempenhar um papel crucial na gestão sustentável do
+            lixo eletrônico.</p><br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- conteúdo -->
+  <div class="container conteudo">
+    <div class="w3-container w3-animate-bottom w3-panel">
+      <h3 class="titulo">A Importância da Reciclagem do Lixo Eletrônico</h3>
+    </div>
+  </div>
+
+  <div class="container conteudo">
+    <p class="texto w3-container w3-animate-bottom">Reciclar o lixo eletrônico é essencial para minimizar seu impacto
+      negativo no meio ambiente e na saúde pública. <span class="marcatexto">A reciclagem adequada desses dispositivos
+        permite a recuperação de metais valiosos</span>, como <span class="marcatexto">ouro</span>, <span
+        class="marcatexto">prata</span> e <span class="marcatexto">cobre</span>, reduzindo a necessidade de mineração
+      desses recursos. Além disso, a <span class="marcatexto">reciclagem evita a contaminação do solo e da
+        água</span>, ajudando a preservar ecossistemas naturais.</p>
+  </div><br>
+
+  <div class="container conteudo">
+    <h3 class="titulo w3-container w3-animate-bottom w3-panel">A Necessidade De Conscientização E Regulamentações</h3>
+    <br>
+    <p class="texto w3-container w3-animate-bottom">Para enfrentar efetivamente o problema do lixo eletrônico, é
+      necessário conscientizar a população sobre a importância da reciclagem adequada e dos perigos associados à sua
+      disposição inadequada. Além disso, é fundamental implementar regulamentações mais rigorosas para garantir que
+      <span class="marcatexto">empresas</span> e <span class="marcatexto">consumidores</span> ajam de forma
+      responsável ao descartar dispositivos eletrônicos.</p>
+  </div><br>
+
+  <div class="container conteudo">
+    <h3 class="titulo w3-container w3-animate-bottom w3-panel">Alternativas Sustentáveis</h3>
+    <br>
+    <p class="texto w3-container w3-animate-bottom">Além da reciclagem, outras abordagens sustentáveis podem ser
+      adotadas para reduzir o lixo eletrônico. Aumentar a <span class="marcatexto">durabilidade dos produtos
+        eletrônicos</span>, promover a <span class="marcatexto">reutilização de dispositivos funcionais</span> e
+      desenvolver <span class="marcatexto">tecnologias mais sustentáveis</span> são medidas que contribuem para a
+      redução desse problema.</p>
+  </div><br>
+
+  <div class="container conteudo">
+    <h3 class="titulo w3-container w3-animate-bottom w3-panel">Qual A Lei Para A Coleta E Reciclagem De Lixo
+      Eletrônico?</h3>
+    <br>
+    <p class="texto w3-container w3-animate-bottom">A gestão desse resíduo é regulamentada por leis específicas,
+      controlando o <span class="marcatexto">descarte incorreto de lixo eletrônico</span> e promovendo práticas
+      sustentáveis. No Brasil, a Política Nacional de Resíduos Sólidos (<i>Lei n.º 12.305/2010</i>) estabelece
+      diretrizes para a gestão integrada desse tipo de resíduo, incluindo o lixo eletrônico. <br><br>Esta legislação
+      atribui <u>responsabilidade</u> comum aos <span class="marcatexto">fabricantes</span>, <span
+        class="marcatexto">importadores</span>, <span class="marcatexto">distribuidores</span> e <span
+        class="marcatexto">consumidores</span> quanto ao local de descarte de lixo eletrônico, bem como seus demais
+      cuidados. <br><br>Além disso, o Brasil possui acordos setoriais específicos relativos à logística reversa de
+      produtos eletrônicos. Esses acordos estipulam o que fazer e como fazer, bem como a forma ambientalmente
+      responsável de descartar o lixo eletrônico.
+      Em suma, o lixo eletrônico é um tema complexo que exige atenção. Aderir aos métodos de descarte de lixo
+      eletrônico de forma responsável e seguir as leis em vigor é crucial para evitar consequências negativas e manter
+      uma abordagem sustentável à gestão destes resíduos.</p>
+  </div><br>
+
+  <div class="container conteudo">
+    <h3 class="titulo w3-container w3-animate-bottom w3-panel">Substâncias Tóxicas Do Lixo Eletrônico</h3>
+    <br>
+    <p class="texto w3-container w3-animate-bottom">Os dispositivos eletrônicos contêm uma gama de substâncias tóxicas
+      que demandam atenção e cuidados durante o descarte. <br><br>Alguns exemplos são: <br>
+      <ul class="topicos">
+        <b>• Chumbo</b>: frequentemente encontrado em baterias e soldas, pode causar danos ao sistema nervoso;<br>
+        <b>• Mercúrio</b>: presente em lâmpadas fluorescentes e em alguns circuitos eletrônicos, é uma substância
+        altamente tóxica que pode afetar o sistema renal e nervoso;<br>
+        <b>• Cádmio</b>: comum em baterias recarregáveis, é reconhecido como carcinogênico e pode causar danos aos
+        rins e pulmões;<br>
+        <b>• Bifenilos policlorados (PCBs)</b>: utilizados em equipamentos elétricos e eletrônicos, são persistentes
+        no meio ambiente e podem causar impactos adversos à saúde e à fauna.
+
+
+        <div class="container conteudo">
+          <h3 class="titulo w3-container w3-animate-bottom w3-panel">Como Descartar o Lixo Eletrônico?</h3>
+          <br>
+          <p class="texto w3-container w3-animate-bottom">Os <u>perigos</u> do lixo eletrônico estão justamente no seu
+            <span class="marcatexto">descarte incorreto</span> e na presença de <u>substâncias tóxicas</u> que podem ser
+            liberadas. Componentes presentes em muitos dispositivos eletrônicos representam ameaças à saúde humana e ao
+            meio
+            ambiente. <br><br>
+            A exposição a substâncias nocivas presentes nesse tipo de resíduo podem causar <u>danos</u> no <span
+              class="marcatexto">sistema nervoso</span>, <span class="marcatexto">coração</span>, <span
+              class="marcatexto">cérebro</span>, <span class="marcatexto">rins</span>, <span
+              class="marcatexto">fígado</span> e no <span class="marcatexto">sistema reprodutivo</span>, além de
+            <u>contaminação</u> do <span class="marcatexto">solo</span> e da <span class="marcatexto">água</span>. Por
+            essa
+            razão, o descarte de lixo eletrônico de forma correta pode amenizar esses riscos. <br><br>O descarte correto
+            de
+            lixo eletrônico é fundamental para minimizar os riscos ambientais e para a saúde pública. Apesar dos
+            potenciais
+            danos ao ambiente e aos indivíduos, a reciclagem destes itens é uma forma eficaz de reduzir drasticamente o
+            lixo
+            eletrônico. <br><br>A seguir estão maneiras comprovadas de abordar o problema: <br><br></p>
+
+          <div class='container'>
+            <div class='row'>
+              <div class='col-6'>
+                <div class=''>
+                  <div class="container" style="width: 25rem;">
+                    <img src="../../assets/images/descarte.jpg" class="card-img-top" alt="..."><br><br>
+                    <div class="card-body"><br>
+                      <p class="texto">Trazer o lixo eletrônico de volta para a empresa de origem (logística reversa):
+                        <br><br>muitas empresas que vendem itens eletrônicos possuem seu próprio <span
+                          class="marcatexto">centro de reciclagem</span>. Além disso, a reciclagem lá muitas vezes dá ao
+                        cliente a opção de trocar o dispositivo por um novo por uma fração do custo;</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class='col-5'>
+                <div class=''>
+                  <div class="container" style="width: 25rem;">
+                    <img src="../../assets/images/recompra.jpg" class="card-img-top" alt="..."><br><br>
+                    <div class="card-body"><br>
+                      <p class="texto">Procure programas de recompra: <br><br>diversas empresas instituem programas para
+                        recompra de dispositivos antigos. Esses programas são projetados para tornar o descarte do lixo
+                        eletrônico o mais <u>simples</u> possível para o consumidor e <span
+                          class="marcatexto">ambientalmente seguro</span>.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><br>
+
+          <div class="container conteudo">
+            <h3 class="titulo">Como Funciona o Processo De Reciclagem</h3>
+            <br>
+            <p class="texto w3-container w3-animate-bottom">No caso dos eletrônicos, existem passos para assegurar que o
+              descarte seja feito da maneira mais segura para o consumidor, visto que os produtos contêm materiais
+              tóxicos
+              como <span class="marcatexto">gases</span>, <span class="marcatexto">metais</span> e <span
+                class="marcatexto">óleos</span>. Em primeiro lugar, está a decisão do descarte. É importante separar o
+              que
+              será descartado de outros resíduos. <br><br>
+              O segundo passo é <span class="marcatexto">remover baterias</span> e <span class="marcatexto">dados
+                pessoais</span> de aparelhos como <u>celulares</u>, <u>computadores</u> e <u>tablets</u>. Fazer backup é
+              uma
+              alternativa caso queira salvar os dados. Um ponto de extrema importância é <b>não</b> desmontar os
+              produtos,
+              porque a desmontagem deve ser feita por profissionais treinados. Depois disso, é necessário encontrar o
+              lugar
+              correto para o descarte. <br><br>
+              A partir desse ponto a logística reversa começa efetivamente com a desmontagem e triagem (chamada
+              manufatura
+              reversa). Essa desmontagem correta por pessoas treinadas diminui as chances de riscos ao meio ambiente e à
+              saúde. Em seguida, os materiais são encaminhados para a reciclagem ou para o descarte.
+              Depois disso, inicia-se a <u>manufatura reversa</u> que precisa cumprir exigências asseguradas nas leis,
+              como
+              a obtenção de licenças de órgãos ambientais por parte das empresas responsáveis. Isso garante que a
+              destinação
+              final do produto é adequada e que os materiais descartados receberam o devido tratamento e podem ser
+              reintroduzidos como novos produtos. </p>
+          </div><br><br>
+
+
+          <div id="desce" class="container w3-animate-bottom text-center">
+            <a href="../../assets/files/lixo-eletrônico-e-waste.pdf" target="_blank" download="e-book-e-waste">
+              <span class="link">Baixe o e-book
+              </span>
+            </a>
+          </div>
+          <!-- rodapé -->
+          <footer>
+            <div class="container">
+              <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                  <span><a routerLink="/home"><img src="../../assets/images/logo.png" alt="Logomarca da E-Waste"
+                        width="200"></a></span>
+                  <div class="row mt-5">
+                    <div class="col-md-12 text-center">
+                      <span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/?locale=pt_BR"><img
+                            src="assets/images/efacebook_social media_icon.png" class="hover"
+                            alt="icone-facebook"></a></span>
+                      <span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.instagram.com/"><img
+                            src="assets/images/eintsagram_social media_icon.png" class="hover"
+                            alt="icone-instagram"></a></span>
+                      <span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/login/pt"><img
+                            src="assets/images/elinkedin_social media_icon.png" class="hover"
+                            alt="icone-twitter"></a></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-5">
+                  <div class="col-md-12 text-center">
+                    <p class="footer">
+                      Copyright ©2024<script>
+                        document.write(new Date().getFullYear());
+
+                      </script> All rights reserved.
+                    </p>
+                  </div>
+                </div>
+                <!-- Code injected by live-server -->
+                <script>
+                  var slideIndex = 1;
+                  showDivs(slideIndex);
+
+                  function plusDivs(n) {
+                    showDivs(slideIndex += n);
+                  }
+
+                  function showDivs(n) {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    if (n > x.length) {
+                      slideIndex = 1
+                    }
+                    if (n < 1) {
+                      slideIndex = x.length
+                    }
+                    for (i = 0; i < x.length; i++) {
+                      x[i].style.display = "none";
+                    }
+                    x[slideIndex - 1].style.display = "block";
+                  }
+
+                  // <![CDATA[  <-- For SVG support
+                  if ('WebSocket' in window) {
+                    (function () {
+                      function refreshCSS() {
+                        var sheets = [].slice.call(document.getElementsByTagName("link"));
+                        var head = document.getElementsByTagName("head")[0];
+                        for (var i = 0; i < sheets.length; ++i) {
+                          var elem = sheets[i];
+                          var parent = elem.parentElement || head;
+                          parent.removeChild(elem);
+                          var rel = elem.rel;
+                          if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() ==
+                            "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (
+                              new Date()
+                              .valueOf());
+                          }
+                          parent.appendChild(elem);
+                        }
+                      }
+                      var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                      var address = protocol + window.location.host + window.location.pathname + '/ws';
+                      var socket = new WebSocket(address);
+                      socket.onmessage = function (msg) {
+                        if (msg.data == 'reload') window.location.reload();
+                        else if (msg.data == 'refreshcss') refreshCSS();
+                      };
+                      if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                        console.log('Live reload enabled.');
+                        sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                      }
+                    })();
+                  } else {
+                    console.error(
+                      'Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+                  }
+                  // ]]>
+
+                </script>

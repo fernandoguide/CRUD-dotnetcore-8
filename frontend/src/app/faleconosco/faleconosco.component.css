@@ -1,0 +1,135 @@
+  header {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+    background: white;
+    /* box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; */
+    padding: 0%;
+    border: #49ae90;
+    border-bottom-style: solid;
+  }
+
+  footer {
+    background: white;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    border: #49ae90;
+    border-top-style: solid;
+    /* box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; */
+    padding: 0%;
+    width: 100%;
+    bottom: 0;
+  }
+
+  .titulo {
+    text-align: center;
+    color: #49ae90;
+    font-size: 30px;
+    font-family: 'Protest Riot', sans-serif;
+  }
+
+  .texto {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+    font-size: 17px;
+  }
+
+  .saibaMais {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+    font-size: 15px;
+  }
+
+  .link {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+  }
+
+  .formulario {
+    width: 400px;
+    padding: 1em;
+    text-align: justify;
+    border: 1px solid rgba(117, 117, 117, 0.1);
+    box-shadow: 0 0 50px rgba(117, 117, 117, 0.1);
+    box-sizing: border-box;
+    border: 1px solid #e2e2e2;
+    border-radius: 20px;
+  }
+
+  .formulario div+div {
+    margin-top: 1em;
+    text-align: center;
+    background-color: white;
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: right;
+    background-color: white;
+  }
+
+  .flex-container>div {
+    margin: 40px;
+    margin-right: 200px;
+    text-align: center;
+    line-height: 2px;
+    font-size: 30px;
+  }
+
+  .contato {
+    color: #49ae90;
+    font-weight: 10px;
+    font-family: 'Protest Riot', sans-serif;
+  }
+
+  input,
+  textarea {
+    color: black;
+    width: 300px;
+    box-sizing: content-box;
+    border: 1px solid #e2e2e2;
+    border-radius: 7px;
+  }
+
+  textarea {
+    height: 5em;
+    padding: 10px;
+  }
+
+  button {
+    margin-top: 1em;
+  }
+
+  h1 {
+    text-align: left;
+    font-size: 17px;
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+    margin: 150px;
+    margin-right: 500px;
+  }
+
+  /* scroolbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(255, 255, 255);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #49ae90;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #49ae90;
+  }
+
+
