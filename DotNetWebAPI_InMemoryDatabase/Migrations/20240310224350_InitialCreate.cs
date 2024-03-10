@@ -33,6 +33,22 @@ namespace DotNetWebAPI_InMemoryDatabase.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "mensagens",
+                columns: table => new
+                {
+                    id_mensagem = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    mensagem = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    data_hora = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_mensagens", x => x.id_mensagem);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "cliente",
                 columns: table => new
                 {
@@ -40,7 +56,8 @@ namespace DotNetWebAPI_InMemoryDatabase.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     nome = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    fk_contato = table.Column<int>(type: "int", nullable: true)
+                    fk_contato = table.Column<int>(type: "int", nullable: false),
+                    fk_mensagem = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -49,29 +66,13 @@ namespace DotNetWebAPI_InMemoryDatabase.Migrations
                         name: "FK_cliente_contato_fk_contato",
                         column: x => x.fk_contato,
                         principalTable: "contato",
-                        principalColumn: "id");
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateTable(
-                name: "mensagens",
-                columns: table => new
-                {
-                    id_mensagem = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    mensagem = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    data_hora = table.Column<DateTime>(type: "datetime", nullable: false),
-                    fk_cliente = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_mensagens", x => x.id_mensagem);
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_mensagens_cliente_fk_cliente",
-                        column: x => x.fk_cliente,
-                        principalTable: "cliente",
-                        principalColumn: "id_cliente",
+                        name: "FK_cliente_mensagens_fk_mensagem",
+                        column: x => x.fk_mensagem,
+                        principalTable: "mensagens",
+                        principalColumn: "id_mensagem",
                         onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
@@ -82,22 +83,22 @@ namespace DotNetWebAPI_InMemoryDatabase.Migrations
                 column: "fk_contato");
 
             migrationBuilder.CreateIndex(
-                name: "IX_mensagens_fk_cliente",
-                table: "mensagens",
-                column: "fk_cliente");
+                name: "IX_cliente_fk_mensagem",
+                table: "cliente",
+                column: "fk_mensagem");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "mensagens");
-
-            migrationBuilder.DropTable(
                 name: "cliente");
 
             migrationBuilder.DropTable(
                 name: "contato");
+
+            migrationBuilder.DropTable(
+                name: "mensagens");
         }
     }
 }

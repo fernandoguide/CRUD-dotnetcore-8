@@ -31,9 +31,13 @@ namespace DotNetWebAPI_InMemoryDatabase.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("IdCliente"));
 
-                    b.Property<int?>("ContatoId")
+                    b.Property<int>("ContatoId")
                         .HasColumnType("int")
                         .HasColumnName("fk_contato");
+
+                    b.Property<int>("MensagemId")
+                        .HasColumnType("int")
+                        .HasColumnName("fk_mensagem");
 
                     b.Property<string>("Nome")
                         .IsRequired()
@@ -43,6 +47,8 @@ namespace DotNetWebAPI_InMemoryDatabase.Migrations
                     b.HasKey("IdCliente");
 
                     b.HasIndex("ContatoId");
+
+                    b.HasIndex("MensagemId");
 
                     b.ToTable("cliente");
                 });
@@ -80,22 +86,16 @@ namespace DotNetWebAPI_InMemoryDatabase.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("IdMensagem"));
 
-                    b.Property<int>("ClienteId")
-                        .HasColumnType("int")
-                        .HasColumnName("fk_cliente");
-
                     b.Property<DateTime>("DataHora")
-                        .HasColumnType("datetime")
+                        .HasColumnType("datetime(6)")
                         .HasColumnName("data_hora");
 
-                    b.Property<string>("mensagens")
+                    b.Property<string>("Mensagens")
                         .IsRequired()
                         .HasColumnType("longtext")
                         .HasColumnName("mensagem");
 
                     b.HasKey("IdMensagem");
-
-                    b.HasIndex("ClienteId");
 
                     b.ToTable("mensagens");
                 });
@@ -104,20 +104,19 @@ namespace DotNetWebAPI_InMemoryDatabase.Migrations
                 {
                     b.HasOne("DotNetWebAPI_InMemoryDatabase.Models.Contato", "Contato")
                         .WithMany()
-                        .HasForeignKey("ContatoId");
-
-                    b.Navigation("Contato");
-                });
-
-            modelBuilder.Entity("DotNetWebAPI_InMemoryDatabase.Models.Mensagem", b =>
-                {
-                    b.HasOne("DotNetWebAPI_InMemoryDatabase.Models.Cliente", "Cliente")
-                        .WithMany()
-                        .HasForeignKey("ClienteId")
+                        .HasForeignKey("ContatoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Cliente");
+                    b.HasOne("DotNetWebAPI_InMemoryDatabase.Models.Mensagem", "Mensagem")
+                        .WithMany()
+                        .HasForeignKey("MensagemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Contato");
+
+                    b.Navigation("Mensagem");
                 });
 #pragma warning restore 612, 618
         }

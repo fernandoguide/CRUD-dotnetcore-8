@@ -12,9 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IContato, ContatoServices>();
-// builder.Services.AddScoped<IContato, ContatoServices>();
-// builder.Services.AddScoped<ICliente, ClienteServices>();
-// builder.Services.AddScoped<IMensagem, MensagemServices>();
+builder.Services.AddScoped<ICliente, ClienteServices>();
 var connectionString = "server=localhost;user=root;password=password;database=MEU_BANCO";
 // Replace 'YourDbContext' with the name of your own DbContext derived class.
 builder.Services.AddDbContext<ApplicationDbContext>(

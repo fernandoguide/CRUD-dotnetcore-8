@@ -8,16 +8,19 @@ using System.Threading.Tasks;
 namespace DotNetWebAPI_InMemoryDatabase.Models
 {
     [Table("cliente")]
-    public class Cliente()
+    public class Cliente
     {
         [Key]
         [Column("id_cliente")]
         public int IdCliente { get; set; }
 
-        [Column("nome")]
+        [Column("nome"), Required]
         public string Nome { get; set; }
         [Column("fk_contato")]
-        public int? ContatoId { get; set; }
-        public Contato? Contato { get; set; }
+        public int ContatoId { get; set; }
+        public required Contato Contato { get; set; }
+        [Column("fk_mensagem")]
+        public int MensagemId { get; set; }
+        public required Mensagem Mensagem { get; set; }
     }
 }

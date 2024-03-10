@@ -10,8 +10,6 @@ namespace DotNetWebAPI_InMemoryDatabase.Services
         {
             _context = context;
         }
-
-
         public void AddContato(Contato c)
         {
             _context.Contatos.Add(c);

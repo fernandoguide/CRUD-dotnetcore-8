@@ -15,13 +15,15 @@ namespace DotNetWebAPI_InMemoryDatabase.Models
         [Column("id_mensagem")]
         public int IdMensagem { get; set; }
 
-        [Column("mensagem")]
-        public string mensagens { get; set; }
+        [Column("mensagem"), Required]
+        public string Mensagens { get; set; }
 
-        [Column("data_hora", TypeName = "datetime"), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy hh:mm:ss}")]
+        [Column("data_hora")]
         public DateTime DataHora { get; set; }
-        [Column("fk_cliente")]
-        public int ClienteId { get; set; }
-        public Cliente Cliente { get; set; }
+
+        public Mensagem()
+        {
+            DataHora = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(DateTime.UtcNow, "E. South America Standard Time");
+        }
     }
 }

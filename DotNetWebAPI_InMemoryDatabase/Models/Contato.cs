@@ -10,12 +10,9 @@ namespace DotNetWebAPI_InMemoryDatabase.Models
         [Column("id")]
         public int Id { get; set; }
 
-        [Column("telefone")]
+        [Column("telefone"), Required]
         public string Telefone { get; set; }
-        [Column("email")]
-        [EmailAddress]
-        [Required]
+        [Column("email"), EmailAddress]
         public string Email { get; set; }
-
     }
 }
