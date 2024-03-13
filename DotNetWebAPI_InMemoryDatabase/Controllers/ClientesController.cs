@@ -1,6 +1,6 @@
 ﻿using DotNetWebAPI_InMemoryDatabase.dtos;
-using DotNetWebAPI_InMemoryDatabase.Models;
 using DotNetWebAPI_InMemoryDatabase.Services;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DotNetWebAPI_InMemoryDatabase.Controllers
@@ -15,6 +15,7 @@ namespace DotNetWebAPI_InMemoryDatabase.Controllers
             _clientes = clientes;
         }
 
+        [EnableCors]
         [HttpPost]
         public IActionResult AddContato(ClienteRequest c)
         {

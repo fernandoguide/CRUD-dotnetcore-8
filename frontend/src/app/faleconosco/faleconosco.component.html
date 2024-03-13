@@ -38,26 +38,29 @@
         class="contato">Localização</span> <br>Av Paulista, 1896 BL A APT 38 <br><br><br><span class="contato">Horário
         Comercial</span><br>Seg - Sex / 10h - 20h <br>Sáb - Dom / Fechado</h1>
     <div class="container formulario">
-      <form action="/formulario-contato" method="get">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <div class="container"><br>
           <h4 class="titulo">Fale Conosco</h4>
           <br>
           <p class="texto"></p>
         </div>
         <div>
-          <input class="texto" placeholder="Nome" type="texto" id="nome" name="nome_usuario">
+          <input class="texto" placeholder="Nome" type="texto" id="nome" name="nome_usuario" formControlName="nome">
         </div>
         <div>
-          <input class="texto" placeholder="Telefone" type="tel" id="telefone" name="telefone_usuario">
+          <input class="texto" placeholder="Telefone" type="tel" id="telefone" name="telefone_usuario"
+            mask="(00) 0000-0000||(00) 0 0000-0000" formControlName="telefone">
         </div>
         <div>
-          <input class="texto" placeholder="E-mail" type="email" id="email" name="email_usuario">
+          <input class="texto" placeholder="E-mail" type="email" id="email" name="email_usuario"
+            formControlName="email">
         </div>
         <div>
-          <textarea class="texto" placeholder="Mensagem" id="texto" name="mensagem_usuario"></textarea>
+          <textarea class="texto" placeholder="Mensagem" id="texto" name="mensagem_usuario"
+            formControlName="mensagem"></textarea>
         </div>
         <div class="container text-center">
-          <button type="button" class="btn btn-outline-success">Enviar</button>
+          <button type="submit" [disabled]="!form.valid" class="btn btn-outline-success">Enviar</button>
         </div>
         <div>
           <h6 class="saibaMais">Saiba mais</h6><a href="page-termos-condicoes.html">
@@ -67,5 +70,6 @@
       </form>
     </div>
   </div>
+
 </body>
 <!-- formulário -->

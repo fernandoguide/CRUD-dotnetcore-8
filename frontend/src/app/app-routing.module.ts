@@ -8,6 +8,7 @@ import { SobreNosComponent } from './sobrenos/sobrenos.component';
 import { TermosCondicoesComponent } from './termoscondicoes/termoscondicoes.component';
 
 export const routes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'fale-conosco', component: FaleConoscoComponent },
   { path: 'lixo-eletronico', component: LixoEletronicoComponent },
