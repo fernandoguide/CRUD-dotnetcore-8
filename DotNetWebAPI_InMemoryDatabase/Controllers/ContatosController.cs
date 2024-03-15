@@ -20,7 +20,22 @@ namespace DotNetWebAPI_InMemoryDatabase.Controllers
             return Ok(contatos);
         }
         [HttpPost]
-        public IActionResult AddContato(Contato c)
+        // HTTP  
+        // HTTP  é um protocolo de comunicação entre sistemas
+        // requisição e resposta
+        // uma requisiçao  é composta por 
+        // URL ,
+        // HEADER(cabeçalho) ,
+        // Payload (corpo) 
+        // Metodos de comunicacao EX GET,POST,PUT,DELETE entre outros
+        // Status
+        // uma resposta  é composta por
+        // URL ,
+        // HEADER(cabeçalho) ,
+        // Payload (corpo) 
+        // Metodos de comunicacao EX GET,POST,PUT,DELETE entre outros
+        // Status
+        public IActionResult AddContato(Contato c) ///Payload da requisição
         {
             _contatos.AddContato(c);
             return Ok();

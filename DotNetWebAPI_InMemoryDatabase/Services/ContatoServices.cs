@@ -31,15 +31,13 @@ namespace DotNetWebAPI_InMemoryDatabase.Services
         }
         public Contato GetContato(int contatoId)
         {
-            Contato c = _context.Contatos.FirstOrDefault(c => c.Id == contatoId) ??
-         throw new ArgumentNullException("Objeto não encontrado pelo id: " + contatoId);
+            Contato c = _context.Contatos.FirstOrDefault(c => c.Id == contatoId);
             return c;
         }
 
         public Contato UpdateContato(int contatoId, Contato c)
         {
-            var contatoDB = GetContato(contatoId) ??
-          throw new ArgumentNullException("Objeto não encontrado pelo id: " + contatoId);
+            var contatoDB = GetContato(contatoId);
             if (c.Email != null)
             {
                 contatoDB.Email = c.Email;

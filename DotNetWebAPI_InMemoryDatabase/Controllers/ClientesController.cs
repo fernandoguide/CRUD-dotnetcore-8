@@ -17,7 +17,7 @@ namespace DotNetWebAPI_InMemoryDatabase.Controllers
 
         [EnableCors]
         [HttpPost]
-        public IActionResult AddContato(ClienteRequest c)
+        public IActionResult AddCliente(ClienteRequest c)
         {
             var result = _clientes.AddCliente(c);
             return Ok(result);
