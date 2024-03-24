@@ -13,5 +13,6 @@ export class ApiService {
 
   enviarMensagem(body: ClienteRequest) {
     return this.httpClient.post(`${this.URL}`, body)
+      .subscribe(res => console.log(res))
   }
 }

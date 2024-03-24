@@ -40,9 +40,10 @@ import { ApiService } from "./api.service";
   ],
   bootstrap: [AppComponent],
   providers: [
+    HttpClientModule,
+    ApiService,
     provideNgxMask(),
     provideHttpClient(),
-    ApiService
   ]
 })
 export class AppModule { }
