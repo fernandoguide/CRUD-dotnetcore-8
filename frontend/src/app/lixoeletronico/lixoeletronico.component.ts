@@ -15,9 +15,7 @@ export class LixoEletronicoComponent implements OnInit {
   currentImage: string = this.images[0];
 
   ngOnInit() {
-
     this.currentImage = this.images[0];
-
   }
 
   prevImage() {

@@ -2,8 +2,8 @@
     font-family: 'Montserrat', sans-serif;
     margin: 0 auto;
     background: white;
-    /* box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
     padding: 0%;
     border: #49ae90;
     border-bottom-style: solid;
@@ -15,8 +15,8 @@
     color: black;
     border: #49ae90;
     border-top-style: solid;
-    /* box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
     padding: 0%;
     width: 100%;
     bottom: 0;
@@ -144,5 +144,4 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #49ae90;
   }
-
 

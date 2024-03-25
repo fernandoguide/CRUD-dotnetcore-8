@@ -79,8 +79,6 @@ header {
     color: black;
     margin-left: 40px;
   }
-  .mySlides {display:none;}
-
   .download{
     font-family: 'Quicksand', sans-serif;
     color: black;
@@ -181,5 +179,5 @@ header {
 }
 
 .mySlides {
-  display: none;
+  display: grid;
 }
