@@ -14,6 +14,8 @@ import { TermosCondicoesComponent } from "./termoscondicoes/termoscondicoes.comp
 import { AppComponent } from "./app.component";
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from "ngx-mask";
 import { ApiService } from "./api.service";
+import { BrowserAnimationsModule, provideAnimations } from "@angular/platform-browser/animations"
+import { ToastrModule, provideToastr } from "ngx-toastr";
 
 
 
@@ -29,12 +31,14 @@ import { ApiService } from "./api.service";
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     NgxMaskDirective,
     NgxMaskPipe,
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
+    ToastrModule.forRoot(),
   ],
   bootstrap: [AppComponent],
   providers: [
@@ -42,6 +46,8 @@ import { ApiService } from "./api.service";
     ApiService,
     provideNgxMask(),
     provideHttpClient(),
+    provideAnimations(),
+    provideToastr(),
   ]
 })
 export class AppModule { }

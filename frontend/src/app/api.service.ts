@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ClienteRequest } from './model/cliente.model';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -13,6 +14,9 @@ export class ApiService {
 
   enviarMensagem(body: ClienteRequest) {
     return this.httpClient.post(`${this.URL}`, body)
-      .subscribe(res => console.log(res))
+      .subscribe((res) => {
+        console.log(res)
+      })
   }
+
 }

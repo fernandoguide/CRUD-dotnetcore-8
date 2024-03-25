@@ -30,6 +30,7 @@ export class FaleConoscoComponent {
     }
     this.api.enviarMensagem(body);
     this.limpar();
+
   }
   limpar() {
     this.form.controls.email.setValue('');
